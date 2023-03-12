@@ -20,7 +20,7 @@ def add():
     # Переменная с датой создания задачи
     date = str(datetime.now())[:16]
 
-    # Сохранине в бд. P.S. Можно было бы сделать обработчик ошибок, но мне посрать :3
+    # Сохранине в бд. P.S. Можно было бы сделать обработчик ошибок
     cur.execute(f"""INSERT INTO activitys(id, activity, date) 
     VALUES('{num}.', '{text_activity}', '{date}');""")
     conn.commit()
